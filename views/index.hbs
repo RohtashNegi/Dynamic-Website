@@ -1,0 +1,194 @@
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="/static/css/style.css">
+    <title>Dynamic Website</title>
+  </head>
+  <body>
+    {{>navbar data=details}}
+   
+{{>slider slides=slides}}
+
+ {{!-- banner 1 section --}}
+
+<section class="banner1_section background1 py-5">
+  
+<div class="container text-center">
+
+<div class="row">
+
+  <div class="col-md-12">
+<h1>start learning new technology here !!</h1>
+
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis voluptatum rem ea dignissimos, molestias doloribus iure illo animi fugit aut.</p>
+<button class="btn btn-outline-primary">Start learning</button>
+
+  </div>
+</div>
+
+</div>
+  
+   </section>
+
+
+
+{{!-- service section --}}
+
+<section id="services_section" class="py-4">
+<div class="container">
+  <h1 class="text-center text-secondary">services that we provide</h1>
+
+<div class="row">
+{{#each services}}
+  <div class="col-md-4">
+
+    <div class="card">
+
+<div class="card-body">
+ <div class="container text-center py-3">
+  <i class="{{this.icon}} service-icon text-secondary"></i>
+ </div>
+<h5 class="class-title">{{this.title}}</h5>
+<p>{{this.description}} </p>
+<a href="{{this.link}}">{{this.linkText}}</a>
+<a href="#!" class="ml-3">Support</a>
+</div>
+      
+    </div>
+  </div>
+{{/each}}
+  
+</div>
+
+</div>
+</section>
+
+{{!-- banner 2 section  --}}
+<section class="banner2_section py-5">
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 text-center">
+{{!-- left side --}}
+<h3> we work for people not for money</h3>
+<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat modi illum, at voluptatibus, esse corporis architecto fugiat aliquam officia non rem dolorem voluptates dolore suscipit aspernatur nam eius dolores obcaecati.25</p>
+    <button class="btn btn-primary">Click Here</button>
+    
+    </div>
+    <div class="col-md-6 text-center">
+{{!-- right side --}}
+<img src="/static/images/s5.jpg" alt="" style="height:250px;border-radius:25px ">
+    </div>
+  </div>
+</div>
+</section>
+
+{{!-- banner 3 section   --}}
+
+
+<section class="banner2_section py-5">
+
+<div class="container">
+  <div class="row">
+     <div class="col-md-6 text-center py-2">
+{{!-- left side --}}
+<img src="/static/images/s6.jpg" class="img-fluid" style="height:300px;border-radius:25px ">
+    </div>
+    <div class="col-md-6 text-center">
+{{!-- right side --}}
+<h3> we work for people not for money</h3>
+<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat modi illum, at voluptatibus, esse corporis architecto fugiat aliquam officia non rem dolorem voluptates dolore suscipit aspernatur nam eius dolores obcaecati.25</p>
+    <button class="btn btn-primary">Click Here</button>
+    
+    </div>
+   
+  </div>
+</div>
+</section>
+
+
+{{!-- contact us section --}}
+
+<section id="contact_us_section" class="py-5 background1">
+  <div class="container">
+    <h3 class="text-center text-secondary">Contact Us</h3>
+    <div class="row">
+      <div class="col-md-12">
+
+
+<form action="/process-contact-form" method="post">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Your email address</label>
+    <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3">
+    <label for="contactNumberField" class="form-label">Your contact number</label>
+    <input name="phone" type="number" class="form-control" id="contactNumberField">
+  </div>
+
+        <div class="form-floating my-2">
+        <textarea name="query" style="height: 250px;" class="form-control" placeholder="Enter your query here" id="queryField"></textarea>
+        <label for="queryField">Your query</label>
+        </div>
+
+
+ <div class="container text-center">
+   <button type="submit" class="btn btn-dark">Submit</button>
+ </div>
+</form>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+{{!-- about section  --}}
+
+<section class="action_section py-5" id="about_us">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>About this site</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore nobis cumque eum rerum perspiciatis architecto blanditiis! Dignissimos sed ab sit maiores deserunt atque excepturi alias harum repellendus. Beatae consectetur ratione tempora laudantium, sapiente impedit ipsa corrupti hic commodi, saepe sint neque placeat enim nesciunt veritatis itaque excepturi sit ullam laboriosam sequi perspiciatis maiores? Dolore minima voluptatibus deserunt fugiat ratione dignissimos quo qui blanditiis enim adipisci quidem voluptas modi sapiente, veniam nisi nesciunt maxime quisquam officiis esse. Sequi error nesciunt libero nisi? Deleniti illum architecto distinctio perspiciatis nam, vel minus quas temporibus amet voluptatibus, tempora fuga dolorum facilis. Consectetur, amet eveniet!</p>
+    <div class="container text-center">
+       <button class="btn  btn-success">
+      Contact Us
+     </button>
+    </div>
+     
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer background1 text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+  @2023 Copyright: <span>doneWithWebsite</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
